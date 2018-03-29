@@ -1,11 +1,10 @@
 //
-//  Task.swift
-//  Task Burner
+//  ViewController.swift
+//  myMovie2
 //
-//  Created by Andrei Nagy on 10/18/16.
-//  Copyright © 2016 weheartswift.com. All rights reserved.
+//  Created by Mickey English on 26/03/2018.
+//  Copyright © 2018 Mickey English. All rights reserved.
 //
-
 import Foundation
 import Firebase
 
@@ -14,9 +13,9 @@ import Firebase
  * ViewControllers too, so places can exist where the
  * particular string is used for something else.
  */
-let kTaskTitleKey = "title"
-let kTaskCompletedKey = "completed"
-let kTaskUserKey = "user"
+let movieTitle = "title"
+let movieWatched = "completed"
+let movieUser = "user"
 
 struct Task {
     let title: String
@@ -37,9 +36,9 @@ struct Task {
     */
     init(snapshot: FIRDataSnapshot) {
         let snapshotValue = snapshot.value as! [String: Any]
-        self.title = snapshotValue[kTaskTitleKey] as! String
-        self.user = snapshotValue[kTaskUserKey] as! String
-        self.completed = snapshotValue[kTaskCompletedKey] as! Bool
+        self.title = snapshotValue[movieTitle] as! String
+        self.user = snapshotValue[movieUser] as! String
+        self.completed = snapshotValue[movieWatched] as! Bool
         self.firebaseReference = snapshot.ref
     }
     
@@ -47,9 +46,9 @@ struct Task {
     */
     func toDictionary() -> Any {
         return [
-            kTaskTitleKey: self.title,
-            kTaskUserKey: self.user,
-            kTaskCompletedKey: self.completed
+            movieTitle: self.title,
+            movieUser: self.user,
+            movieWatched: self.completed
         ]
     }
 }

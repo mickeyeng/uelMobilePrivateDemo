@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2779F1A6206D5E7F008378EB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779F1A5206D5E7F008378EB /* MainMenuViewController.swift */; };
 		2779F1A8206D6C98008378EB /* movie-on-monitor-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2779F1A7206D6C97008378EB /* movie-on-monitor-screen.png */; };
-		45CA5D42B8CBE71912BD2C9A /* libPods-Task Burner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FA14CE29787D43139CEF1 /* libPods-Task Burner.a */; };
+		45CA5D42B8CBE71912BD2C9A /* libPods-Task Burner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FA14CE29787D43139CEF1 /* libPods-Task Burner.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		B82D98C81DB6A79100FDFCCD /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D98C71DB6A79100FDFCCD /* TasksTableViewCell.swift */; };
 		B82D98CA1DB6B2C800FDFCCD /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D98C91DB6B2C800FDFCCD /* TaskViewController.swift */; };
 		B82D98CC1DB6E29E00FDFCCD /* AlertController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D98CB1DB6E29E00FDFCCD /* AlertController-Extension.swift */; };
@@ -70,7 +70,6 @@
 		B8C2F8D11DB5232A00207796 = {
 			isa = PBXGroup;
 			children = (
-				2779F1A5206D5E7F008378EB /* MainMenuViewController.swift */,
 				B8C2F8DC1DB5232A00207796 /* Task Burner */,
 				B8C2F8DB1DB5232A00207796 /* Products */,
 				B5022416AD8DF4145B8B5A4C /* Pods */,
@@ -90,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				B84AC7BD1DB52D3C00FA230A /* Task Burner.entitlements */,
+				2779F1A5206D5E7F008378EB /* MainMenuViewController.swift */,
 				B8C2F8DD1DB5232A00207796 /* AppDelegate.swift */,
 				B82D98CB1DB6E29E00FDFCCD /* AlertController-Extension.swift */,
 				B8C2F8DF1DB5232A00207796 /* MainViewController.swift */,

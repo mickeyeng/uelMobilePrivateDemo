@@ -1,9 +1,9 @@
 //
-//  AppDelegate.swift
-//  Task Burner
+//  ViewController.swift
+//  myMovie2
 //
-//  Created by Andrei Nagy on 10/17/16.
-//  Copyright © 2016 weheartswift.com. All rights reserved.
+//  Created by Mickey English on 26/03/2018.
+//  Copyright © 2018 Mickey English. All rights reserved.
 //
 
 import UIKit

@@ -1,11 +1,10 @@
 //
-//  TasksTableViewController.swift
-//  Task Burner
+//  ViewController.swift
+//  myMovie2
 //
-//  Created by Andrei Nagy on 10/18/16.
-//  Copyright © 2016 weheartswift.com. All rights reserved.
+//  Created by Mickey English on 26/03/2018.
+//  Copyright © 2018 Mickey English. All rights reserved.
 //
-
 import UIKit
 import Firebase
 
@@ -24,7 +23,7 @@ class TasksTableViewController: UITableViewController {
         
         /* Query tasks from firebase when this view controller is instantiated
         */
-        self.tasksReference.queryOrdered(byChild: kTaskCompletedKey).observe(.value, with: { snapshot in
+        self.tasksReference.queryOrdered(byChild: movieWatched).observe(.value, with: { snapshot in
             
             /* The callback block will be executed each and every time the value changes.
             */
@@ -65,9 +64,9 @@ class TasksTableViewController: UITableViewController {
                     
                     let taskFirebasePath = task.firebaseReference
                     taskFirebasePath?.updateChildValues([
-                        kTaskTitleKey: title,
-                        kTaskUserKey: email,
-                        kTaskCompletedKey: completed
+                        movieTitle: title,
+                        movieUser: email,
+                        movieWatched: completed
                         ])
                 }
             } else {

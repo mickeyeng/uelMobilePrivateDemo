@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Task Burner
+//  myMovie2
 //
-//  Created by Andrei Nagy on 10/17/16.
-//  Copyright © 2016 weheartswift.com. All rights reserved.
+//  Created by Mickey English on 26/03/2018.
+//  Copyright © 2018 Mickey English. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import Firebase
 
 let kUserLoggedInSegueIdentifier = "userLoggedIn"
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var InputEmail: UITextField!
     @IBOutlet weak var InputPassword: UITextField!
@@ -25,6 +25,10 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let auth = FIRAuth.auth() {
+            
+            self.InputEmail.delegate = self
+            self.InputPassword.delegate = self
+            
             
             /* Add a state change listener to firebase
              to get a notification if the user signed in.
@@ -49,6 +53,18 @@ class MainViewController: UIViewController {
             auth.removeStateDidChangeListener(self)
         }
     }
+    
+    // hide the keyboard when the user presses away from the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // hide the keyboard when the user presses return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
     
     
     // register function

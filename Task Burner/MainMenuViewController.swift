@@ -1,11 +1,10 @@
 //
-//  MainMenuViewController.swift
-//  Task Burner
+//  ViewController.swift
+//  myMovie2
 //
-//  Created by Mickey English on 29/03/2018.
-//  Copyright © 2018 Andrei Nagy. All rights reserved.
+//  Created by Mickey English on 26/03/2018.
+//  Copyright © 2018 Mickey English. All rights reserved.
 //
-
 import UIKit
 import Firebase
 
