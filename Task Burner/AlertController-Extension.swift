@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+// AlertController.swift
 //  myMovie2
 //
 //  Created by Mickey English on 26/03/2018.

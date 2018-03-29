@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  myMovie2
 //
 //  Created by Mickey English on 26/03/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-let kUserLoggedInSegueIdentifier = "userLoggedIn"
+let userLoggedIn = "userLoggedIn"
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     
@@ -25,9 +25,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let auth = FIRAuth.auth() {
-            
-            self.InputEmail.delegate = self
-            self.InputPassword.delegate = self
+        
+        // tap screen to hide keyboard
+        self.InputEmail.delegate = self
+        self.InputPassword.delegate = self
             
             
             /* Add a state change listener to firebase
@@ -36,7 +37,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             auth.addStateDidChangeListener({ (auth, user) in
                 if user != nil && user != self.currentUser {
                     self.currentUser = user
-                    self.performSegue(withIdentifier: kUserLoggedInSegueIdentifier,
+                    self.performSegue(withIdentifier: userLoggedIn,
                                       sender: self)
                 }
             })
@@ -47,9 +48,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         super.viewDidDisappear(animated)
         
         if let auth = FIRAuth.auth() {
-            /* Following the balance principle in iOS,
-             Stop listening to user state changes while not on screen.
-            */
+            
+             //Stop listening to user state changes while not on screen.
+          
             auth.removeStateDidChangeListener(self)
         }
     }

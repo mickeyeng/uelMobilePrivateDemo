@@ -17,7 +17,7 @@ let movieTitle = "title"
 let movieWatched = "completed"
 let movieUser = "user"
 
-struct Task {
+struct Movie {
     let title: String
     let user: String
     let firebaseReference: FIRDatabaseReference?

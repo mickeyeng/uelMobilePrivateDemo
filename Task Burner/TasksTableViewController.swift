@@ -8,14 +8,14 @@
 import UIKit
 import Firebase
 
-let kTasksListPath = "tasks-list"
+let kMoviesListPath = "movies-list"
 let kTaskViewControllerSegueIdentifier = "TaskViewController"
 
 class TasksTableViewController: UITableViewController {
     
-    let tasksReference = FIRDatabase.database().reference(withPath: kTasksListPath)
-    var tasks = [Task]()
-    var selectedTask: Task? = nil
+    let movieReference = FIRDatabase.database().reference(withPath: kMoviesListPath)
+    var movies = [Movie]()
+    var selectedTask: Movie? = nil
     weak var currentUser = FIRAuth.auth()?.currentUser
     
     override func viewDidLoad() {
@@ -23,18 +23,18 @@ class TasksTableViewController: UITableViewController {
         
         /* Query tasks from firebase when this view controller is instantiated
         */
-        self.tasksReference.queryOrdered(byChild: movieWatched).observe(.value, with: { snapshot in
+        self.movieReference.queryOrdered(byChild: movieWatched).observe(.value, with: { snapshot in
             
             /* The callback block will be executed each and every time the value changes.
             */
-            var items: [Task] = []
+            var items: [Movie] = []
             
             for item in snapshot.children {
-                let task = Task(snapshot: item as! FIRDataSnapshot)
-                items.append(task)
+                let movie = Movie(snapshot: item as! FIRDataSnapshot)
+                items.append(movie)
             }
             
-            self.tasks = items
+            self.movies = items
             self.tableView.reloadData()
         })
     }
@@ -77,8 +77,8 @@ class TasksTableViewController: UITableViewController {
                     let completed = taskViewController.taskCompleted,
                     let email = self.currentUser?.email {
                     
-                    let task = Task(title: title, user: email, completed: completed)
-                    let taskFirebasePath = self.tasksReference.ref.child(title.lowercased())
+                    let task = Movie(title: title, user: email, completed: completed)
+                    let taskFirebasePath = self.movieReference.ref.child(title.lowercased())
                     taskFirebasePath.setValue(task.toDictionary())
                 }
             }
@@ -97,22 +97,22 @@ class TasksTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasks.count
+        return self.movies.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TasksTableViewCell", for: indexPath)
         
         if let c = cell as? TasksTableViewCell {
-            let task = self.tasks[indexPath.row]
-            c.titleLabel.text = task.title
-            c.completedSwitch.setOn(task.completed, animated: true)
+            let movie = self.movies[indexPath.row]
+            c.titleLabel.text = movie.title
+            c.completedSwitch.setOn(movie.completed, animated: true)
         }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task = self.tasks[indexPath.row]
+        let task = self.movies[indexPath.row]
         
         /* Keep a reference to the task that is currently edited.
         */
@@ -126,7 +126,7 @@ class TasksTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let task = self.tasks[indexPath.row]
+            let task = self.movies[indexPath.row]
             /* Delete this task.
              No tableview updates should be done here because a callback notification
              will be provided.

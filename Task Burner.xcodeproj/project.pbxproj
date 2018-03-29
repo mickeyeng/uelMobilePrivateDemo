@@ -20,7 +20,7 @@
 		B8C2F8E51DB5232B00207796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C2F8E41DB5232B00207796 /* Assets.xcassets */; };
 		B8C2F8E81DB5232B00207796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C2F8E61DB5232B00207796 /* LaunchScreen.storyboard */; };
 		B8E067311DB62088007419FC /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E067301DB62088007419FC /* TasksTableViewController.swift */; };
-		B8E067331DB62CAE007419FC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E067321DB62CAE007419FC /* Task.swift */; };
+		B8E067331DB62CAE007419FC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E067321DB62CAE007419FC /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		B8C2F8E71DB5232B00207796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8C2F8E91DB5232B00207796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8E067301DB62088007419FC /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
-		B8E067321DB62CAE007419FC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B8E067321DB62CAE007419FC /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		DF26735651F8B15D975F56B5 /* Pods-Task Burner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task Burner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task Burner/Pods-Task Burner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 				B8C2F8DD1DB5232A00207796 /* AppDelegate.swift */,
 				B82D98CB1DB6E29E00FDFCCD /* AlertController-Extension.swift */,
 				B8C2F8DF1DB5232A00207796 /* MainViewController.swift */,
-				B8E067321DB62CAE007419FC /* Task.swift */,
+				B8E067321DB62CAE007419FC /* Movie.swift */,
 				B8E067301DB62088007419FC /* TasksTableViewController.swift */,
 				B82D98C71DB6A79100FDFCCD /* TasksTableViewCell.swift */,
 				B82D98C91DB6B2C800FDFCCD /* TaskViewController.swift */,
@@ -249,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2779F1A6206D5E7F008378EB /* MainMenuViewController.swift in Sources */,
-				B8E067331DB62CAE007419FC /* Task.swift in Sources */,
+				B8E067331DB62CAE007419FC /* Movie.swift in Sources */,
 				B82D98C81DB6A79100FDFCCD /* TasksTableViewCell.swift in Sources */,
 				B8E067311DB62088007419FC /* TasksTableViewController.swift in Sources */,
 				B8C2F8E01DB5232A00207796 /* MainViewController.swift in Sources */,
