@@ -32,6 +32,13 @@ class MainMenuViewController: UIViewController {
     }
     */
 
+    
+    
+    @IBAction func cinemaButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueToCinema", sender: self)
+    }
+    
+    
     @IBAction func logoutButton(_ sender: UIButton) {
         if let auth = FIRAuth.auth() {
             do {
