@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Task Burner.xcodeproj">
+      location = "group:/Users/mickeyenglish/Documents/AppDevelopment/uni/final movie/Movie/MyMovieFinal.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -8,12 +8,12 @@
 import UIKit
 import Firebase
 
-let kMoviesListPath = "movies-list"
-let kTaskViewControllerSegueIdentifier = "TaskViewController"
+let moviesListPath = "movies-list"
+let MovieViewControllerSegueIdentifier = "MovieViewController"
 
 class TasksTableViewController: UITableViewController {
     
-    let movieReference = FIRDatabase.database().reference(withPath: kMoviesListPath)
+    let movieReference = FIRDatabase.database().reference(withPath: moviesListPath)
     var movies = [Movie]()
     var selectedTask: Movie? = nil
     weak var currentUser = FIRAuth.auth()?.currentUser
@@ -40,7 +40,7 @@ class TasksTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == kTaskViewControllerSegueIdentifier {
+        if segue.identifier == MovieViewControllerSegueIdentifier {
             /* Pass along the selected task to the particular task view controller.
             */
             if let taskViewController = segue.destination as? TaskViewController {
@@ -91,7 +91,7 @@ class TasksTableViewController: UITableViewController {
     }
     
     @IBAction func addTask() {
-        self.performSegue(withIdentifier: kTaskViewControllerSegueIdentifier, sender: self)
+        self.performSegue(withIdentifier: MovieViewControllerSegueIdentifier, sender: self)
     }
     
     // MARK: - Table view data source
@@ -117,7 +117,7 @@ class TasksTableViewController: UITableViewController {
         /* Keep a reference to the task that is currently edited.
         */
         self.selectedTask = task
-        self.performSegue(withIdentifier: kTaskViewControllerSegueIdentifier, sender: self)
+        self.performSegue(withIdentifier: MovieViewControllerSegueIdentifier, sender: self)
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

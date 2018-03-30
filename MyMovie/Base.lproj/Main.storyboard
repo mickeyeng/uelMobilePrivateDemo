@@ -19,7 +19,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Task_Burner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MyMovieFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -95,7 +95,7 @@
         <!--Main Menu-->
         <scene sceneID="g1r-xa-iA2">
             <objects>
-                <viewController title="Main Menu" id="xeF-K5-tnb" customClass="MainMenuViewController" customModule="Task_Burner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main Menu" id="xeF-K5-tnb" customClass="MainMenuViewController" customModule="MyMovieFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="760-al-x1n"/>
                         <viewControllerLayoutGuide type="bottom" id="wKM-r4-CWb"/>
@@ -141,29 +141,30 @@
         <!--Movies-->
         <scene sceneID="lhA-BB-K1o">
             <objects>
-                <tableViewController id="Onc-Xu-mea" customClass="TasksTableViewController" customModule="Task_Burner" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pGI-GR-4v3">
+                <tableViewController id="Onc-Xu-mea" customClass="TasksTableViewController" customModule="MyMovieFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="pGI-GR-4v3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TasksTableViewCell" id="XDa-Jn-FRo" customClass="TasksTableViewCell" customModule="Task_Burner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TasksTableViewCell" rowHeight="68" id="XDa-Jn-FRo" customClass="TasksTableViewCell" customModule="MyMovieFinal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XDa-Jn-FRo" id="Eqr-ZH-EK3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-c4-zqQ">
-                                            <rect key="frame" x="16" y="11.666666666666666" width="278" height="20.333333333333336"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-c4-zqQ">
+                                            <rect key="frame" x="16" y="23" width="278" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFu-Qm-wpo">
-                                            <rect key="frame" x="310" y="6.6666666666666679" width="51" height="31.000000000000004"/>
+                                        <switch opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFu-Qm-wpo">
+                                            <rect key="frame" x="310" y="19.333333333333371" width="51" height="31"/>
                                         </switch>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.30485731360000001" green="0.33222162719999998" blue="0.39414775369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="PxZ-c4-zqQ" firstAttribute="centerY" secondItem="Eqr-ZH-EK3" secondAttribute="centerY" id="54P-Y9-o4Z"/>
                                         <constraint firstItem="SFu-Qm-wpo" firstAttribute="leading" secondItem="PxZ-c4-zqQ" secondAttribute="trailing" constant="16" id="XDg-7l-AhI"/>
@@ -198,17 +199,17 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="ZgQ-KR-R3b" kind="presentation" identifier="TaskViewController" id="U9u-4W-uyc"/>
+                        <segue destination="ZgQ-KR-R3b" kind="presentation" identifier="MovieViewController" id="U9u-4W-uyc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAo-xV-yoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="124"/>
+            <point key="canvasLocation" x="1564" y="122.66009852216749"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="G9A-AX-uze">
             <objects>
-                <viewController id="ZgQ-KR-R3b" customClass="TaskViewController" customModule="Task_Burner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZgQ-KR-R3b" customClass="TaskViewController" customModule="MyMovieFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1X-uZ-y0A"/>
                         <viewControllerLayoutGuide type="bottom" id="W5c-C5-PF4"/>
@@ -312,8 +313,9 @@
         <image name="movie-on-monitor-screen.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="U9u-4W-uyc"/>
         <segue reference="Y9S-1V-ySW"/>
-        <segue reference="d37-re-uul"/>
-        <segue reference="D7o-j5-qU9"/>
+        <segue reference="0ed-Wd-akZ"/>
+        <segue reference="yrc-H0-EBw"/>
     </inferredMetricsTieBreakers>
 </document>
