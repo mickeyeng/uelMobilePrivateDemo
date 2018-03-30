@@ -140,6 +140,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutButton:" destination="xeF-K5-tnb" eventType="touchUpInside" id="gjb-1R-Dqb"/>
+                                    <segue destination="FtU-Tp-SbD" kind="show" identifier="segueToQr" id="oxh-Z9-gXF"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="movie-on-monitor-screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="R1x-Fe-Fh2">
@@ -173,6 +174,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKT-3y-oiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="904.43349753694588"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MOJ-2Y-l95">
+            <objects>
+                <viewController id="FtU-Tp-SbD" customClass="QRViewController" customModule="MyMovieFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KHD-aI-GSp"/>
+                        <viewControllerLayoutGuide type="bottom" id="wju-aC-Fi4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WB6-bD-UbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr.png" translatesAutoresizingMaskIntoConstraints="NO" id="JxC-Jq-6u9">
+                                <rect key="frame" x="27" y="246" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="ZEX-3c-zr1"/>
+                                    <constraint firstAttribute="height" constant="320" id="o64-az-ruW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JxC-Jq-6u9" firstAttribute="centerY" secondItem="WB6-bD-UbZ" secondAttribute="centerY" id="kBN-GC-2T3"/>
+                            <constraint firstItem="JxC-Jq-6u9" firstAttribute="centerX" secondItem="WB6-bD-UbZ" secondAttribute="centerX" id="tDU-T0-x3e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="QRSquare" destination="JxC-Jq-6u9" id="XvZ-bN-K1y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOD-2B-dNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="1662"/>
         </scene>
         <!--View Controller Cinemas-->
         <scene sceneID="7fb-j6-4W0">
@@ -392,6 +427,7 @@
     </scenes>
     <resources>
         <image name="movie-on-monitor-screen.png" width="256" height="256"/>
+        <image name="qr.png" width="352" height="310"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="86c-Df-wsG"/>
