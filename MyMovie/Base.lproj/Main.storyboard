@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSW-aN-7Xj">
-                                <rect key="frame" x="0.0" y="565" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="511" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.01164490638" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
@@ -118,7 +118,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycl-5J-Yxf">
-                                <rect key="frame" x="0.0" y="454" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="420" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1877675056" green="0.76407283540000004" blue="0.50760352610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
@@ -130,17 +130,16 @@
                                     <segue destination="KHH-AH-wWZ" kind="show" identifier="segueToCinema" id="rtK-Xd-u6X"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yas-lj-fhq">
-                                <rect key="frame" x="0.0" y="678" width="375" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLI-m6-HcQ">
+                                <rect key="frame" x="0.0" y="601" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.18823529410000001" green="0.76470588240000004" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
-                                <state key="normal" title="Logout">
+                                <state key="normal" title="QR Code Scanner">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutButton:" destination="xeF-K5-tnb" eventType="touchUpInside" id="sgp-XB-sOL"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logOutSegue" id="yrc-H0-EBw"/>
+                                    <action selector="logoutButton:" destination="xeF-K5-tnb" eventType="touchUpInside" id="gjb-1R-Dqb"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="movie-on-monitor-screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="R1x-Fe-Fh2">
@@ -154,6 +153,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yas-lj-fhq">
+                                <rect key="frame" x="0.0" y="689" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.01164490638" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButton:" destination="xeF-K5-tnb" eventType="touchUpInside" id="sgp-XB-sOL"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logOutSegue" id="yrc-H0-EBw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30485731360000001" green="0.33222162719999998" blue="0.39414775369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -196,6 +208,7 @@
                                 </state>
                                 <connections>
                                     <action selector="greenwichButton:" destination="KHH-AH-wWZ" eventType="touchUpInside" id="mN0-rB-9mn"/>
+                                    <action selector="stratfordCinema:" destination="KHH-AH-wWZ" eventType="touchUpInside" id="Rlx-Sp-b8D"/>
                                 </connections>
                             </button>
                         </subviews>
