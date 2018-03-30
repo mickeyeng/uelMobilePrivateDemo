@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		274AC089206DE61D009AA9E1 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AC088206DE61C009AA9E1 /* qr.png */; };
+		274AC08B206DF1E2009AA9E1 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AC08A206DF1E1009AA9E1 /* location.png */; };
+		274AC08D206DF24A009AA9E1 /* movie2.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AC08C206DF249009AA9E1 /* movie2.png */; };
+		274AC08F206DF30A009AA9E1 /* qr-code.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AC08E206DF30A009AA9E1 /* qr-code.png */; };
+		274AC091206DF35C009AA9E1 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AC090206DF35C009AA9E1 /* logout.png */; };
 		2779F1A6206D5E7F008378EB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779F1A5206D5E7F008378EB /* MainMenuViewController.swift */; };
 		2779F1A8206D6C98008378EB /* movie-on-monitor-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2779F1A7206D6C97008378EB /* movie-on-monitor-screen.png */; };
 		27FA82AB206DC8D300F8821D /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 27FA82AA206DC8D200F8821D /* movie.png */; };
@@ -30,6 +34,10 @@
 /* Begin PBXFileReference section */
 		207C24F525BD260A052EACE5 /* Pods-Task Burner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task Burner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task Burner/Pods-Task Burner.release.xcconfig"; sourceTree = "<group>"; };
 		274AC088206DE61C009AA9E1 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
+		274AC08A206DF1E1009AA9E1 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		274AC08C206DF249009AA9E1 /* movie2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie2.png; sourceTree = "<group>"; };
+		274AC08E206DF30A009AA9E1 /* qr-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr-code.png"; sourceTree = "<group>"; };
+		274AC090206DF35C009AA9E1 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		2779F1A5206D5E7F008378EB /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		2779F1A7206D6C97008378EB /* movie-on-monitor-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movie-on-monitor-screen.png"; sourceTree = "<group>"; };
 		27FA82AA206DC8D200F8821D /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
@@ -109,9 +117,13 @@
 				B8C2F8E61DB5232B00207796 /* LaunchScreen.storyboard */,
 				B84AC7BB1DB52D1300FA230A /* GoogleService-Info.plist */,
 				2779F1A7206D6C97008378EB /* movie-on-monitor-screen.png */,
+				274AC08A206DF1E1009AA9E1 /* location.png */,
+				274AC08C206DF249009AA9E1 /* movie2.png */,
 				B8C2F8E91DB5232B00207796 /* Info.plist */,
 				27FA82AA206DC8D200F8821D /* movie.png */,
 				274AC088206DE61C009AA9E1 /* qr.png */,
+				274AC08E206DF30A009AA9E1 /* qr-code.png */,
+				274AC090206DF35C009AA9E1 /* logout.png */,
 			);
 			path = MyMovie;
 			sourceTree = "<group>";
@@ -193,11 +205,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274AC08B206DF1E2009AA9E1 /* location.png in Resources */,
 				2779F1A8206D6C98008378EB /* movie-on-monitor-screen.png in Resources */,
 				B84AC7BC1DB52D1300FA230A /* GoogleService-Info.plist in Resources */,
 				27FA82AB206DC8D300F8821D /* movie.png in Resources */,
+				274AC08D206DF24A009AA9E1 /* movie2.png in Resources */,
 				B8C2F8E81DB5232B00207796 /* LaunchScreen.storyboard in Resources */,
 				B8C2F8E51DB5232B00207796 /* Assets.xcassets in Resources */,
+				274AC091206DF35C009AA9E1 /* logout.png in Resources */,
+				274AC08F206DF30A009AA9E1 /* qr-code.png in Resources */,
 				274AC089206DE61D009AA9E1 /* qr.png in Resources */,
 				B8C2F8E31DB5232A00207796 /* Main.storyboard in Resources */,
 			);
@@ -390,7 +406,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF26735651F8B15D975F56B5 /* Pods-Task Burner.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6U7959RLW9;
@@ -408,7 +423,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 207C24F525BD260A052EACE5 /* Pods-Task Burner.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6U7959RLW9;

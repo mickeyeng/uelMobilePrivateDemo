@@ -134,4 +134,13 @@ class TasksTableViewController: UITableViewController {
             task.firebaseReference?.removeValue()
         }
     }
+    
+    @IBAction func backToMenuTopButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "backToMenu", sender: self)
+    }
+    
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "backToMenu", sender: self)
+    }
+    
 }
